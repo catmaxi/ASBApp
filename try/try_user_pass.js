@@ -1,8 +1,13 @@
 'use strict';
-const snoowrap = require('snoowrap');
+
+import snoowrap from 'snoowrap'
+import dotenv from 'dotenv'
 
 
-const dotenv = require('dotenv')
+// const snoowrap = require('snoowrap');
+
+
+// const dotenv = require('dotenv')
 
 const env = dotenv.config()
 
@@ -32,7 +37,7 @@ let thread = r.getSubmission('msg6cp')
 
 // console.log(thread)
 // let content = thread.fetch().then(res => console.log(Object.keys(res)))
-let content = thread.fetch().then(res => console.log(res.selftext))
+let content = thread.fetch().then(res => console.log(res))
 // replies = thread.expandReplies({limit: 1, depth: 1})
 
 
