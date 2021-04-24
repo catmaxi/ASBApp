@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wenxuan27/ASBApp#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "snoowrap": "^1.22.0"
   },
   "devDependencies": {
