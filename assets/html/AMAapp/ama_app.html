@@ -8,18 +8,33 @@
     <title>AMA App</title>
 </head>
 
-<script src="/assets/scripts/asbapp.js"></script>
 
-<script>
-    console.log("hello")
-</script>
+<script type="text/javascript" src="../../scripts/asbapp.js"></script>
+
+
 
 <body>
 
 
-    <h1>AMA1 App</h1>
+    <h1>AMA App</h1>
 
-    <button onclick="send_test_msg()">Send Test Message</button>
+    <!-- <button onclick="send_test_msg()">Send Test Message</button> -->
+
+
+    <form action="" method="get" id="thread-form">
+        <label for="fname" id="submission-id-label">Submission ID:</label><br>
+        <input type="text" id="submission-id"><br><br>
+        <label for="fname" id="submission-id-label">No List:</label><br>
+        <input type="text" id="submission-id"><br><br>
+        <label for="fname" id="submission-id-label">Accept MODs?:</label><br>
+        <label for="fname" id="submission-id-label">yes:</label>
+        <input type="radio" id="accept-mods-yes" name="accept-mods" value="yes">
+        <label for="fname" id="submission-id-label">no:</label>
+        <input type="radio" id="accept-mods-yes" name="accept-mods" value="no"><br><br>
+        <label for="fname" id="submission-id-label">Output Path:</label><br>
+        <input type="text" id="submission-id">    
+    </form>
+    <button onclick="testrun()">get ama users</button>
 
     <form action="" method="get"></form>
 </body>

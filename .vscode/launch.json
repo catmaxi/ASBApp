@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\try/try_give.mjs"
+            "program": "${workspaceFolder}\\/main.js"
         },
 
         {

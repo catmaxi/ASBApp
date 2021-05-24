@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "electron main.js"
+    "test": "electron main.js",
+    "runserve": "electron main.js"
   },
   "repository": {
     "type": "git",
