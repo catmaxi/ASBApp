@@ -2,9 +2,10 @@
   "name": "asbapp",
   "version": "1.0.0",
   "description": "",
-  "main": "asb.js",
+  "main": "main.js",
   "scripts": {
-    "test": "electron asb.js"
+    "test": "electron main.js",
+    "runserve": "electron main.js"
   },
   "repository": {
     "type": "git",
