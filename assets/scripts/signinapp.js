@@ -13,6 +13,6 @@ const env = dotenv.config()
 
 
 
-for (let envy in env){
-  console.log(envy)
-}
+// for (let envy in env){
+//   console.log(envy)
+// }

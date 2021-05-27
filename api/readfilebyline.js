@@ -13,7 +13,7 @@ async function readFileLineByLine(filepath) {
         fileStream = fs.createReadStream(filepath);
 
     } catch (error) {
-
+        console.log(error)
     }
 
     const rl = readline.createInterface({
