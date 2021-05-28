@@ -34,13 +34,29 @@ export async function getthread(thread_name, no_list, accept_MOD = false, output
 
     authors_list = Array.from(authors)
 
+    authors_list = authors_list.filter( author => author != "[deleted]")
+
+    // new_authors_list = []
+
+    // for (let author of authors_list){
+    //     let str = author
+
+    //     if(author == "[deleted]"){
+    //         str += " deleted"
+    //     } else {
+    //         str += " good"
+    //     }
+
+    //     console.log(str)
+    // }
+
 
     var fs_writer = fs.createWriteStream(output_file_name, {
         flags: 'w'
     })
 
     for (let author of authors_list) {
-        console.log(author)
+        // console.log(author)
 
         fs_writer.write(author)
         fs_writer.write('\n')

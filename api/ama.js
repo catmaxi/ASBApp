@@ -33,6 +33,7 @@ async function getthread(thread_name, no_list, accept_MOD = false, output_file_n
 
 
     authors_list = Array.from(authors)
+    authors_list = authors_list.filter( author => author != "[deleted]")
 
 
     var fs_writer = fs.createWriteStream(output_file_name, {
