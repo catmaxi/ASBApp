@@ -19,22 +19,23 @@ ipcRenderer.on('amathreadsearch', (event, arg) => {
 
 
 async function fetchthreadusers() {
-    let thread_name = 'naqn1p'
-    let no_list = ['JJKirsch']
-    let accept_MOD = false
-    let output_file_name = 'test.txt'
+    // let thread_name = 'naqn1p'
+    // let no_list = ['JJKirsch']
+    // let accept_MOD = false
+    // let output_file_name = 'test.txt'
+    // let args = [thread_name, no_list, accept_MOD, output_file_name]
 
-    // const subID_element = document.getElementById("submission-id");
-    // let thread_ID = subID_element.value
+    const subID_element = document.getElementById("submission-id");
+    let thread_ID = subID_element.value
 
-    // const no_list_element = document.getElementById("no-list");
-    // let no_list = no_list_element.value.split(", ")
+    const no_list_element = document.getElementById("no-list");
+    let no_list = no_list_element.value.split(", ")
 
-    // const accept_mods_element = document.getElementById("accept-mods-yes");
-    // let accept_mods = accept_mods_element.checked
+    const accept_mods_element = document.getElementById("accept-mods-yes");
+    let accept_mods = accept_mods_element.checked
 
-    // const output_path_element = document.getElementById("output-path");
-    // let output_path = output_path_element.value
+    const output_path_element = document.getElementById("output-path");
+    let output_path = output_path_element.value
 
     // console.log(thread_ID)
     // console.log(no_list)
@@ -42,9 +43,8 @@ async function fetchthreadusers() {
     // console.log(output_path)
 
 
-    // let args = [thread_ID, no_list, accept_mods, output_path]
+    let args = [thread_ID, no_list, accept_mods, output_path]
 
-    let args = [thread_name, no_list, accept_MOD, output_file_name]
     let res = await ipcRenderer.sendSync('amathreadsearchsync', args)
 
     console.log(res)
