@@ -66,10 +66,11 @@ async function send_msg(){
     const subject_dom = document.getElementById("subject");
     let subject = subject_dom.value
 
-    const msg_textbox = document.getElementById("msg-textbox");
+    const msg_textbox = document.getElementById("msg-textarea");
     let msg = msg_textbox.value
 
 
+    console.log(msg)
 
     let args = [users_file_path, poap_file_path, subreddit, subject, msg]
     let res = await ipcRenderer.sendSync('sendmsgsync', args)

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../styles/style.css">
     <title>AMA App</title>
 </head>
 
@@ -52,7 +54,8 @@
         <label for="fname" id="subject-label">Subject:</label><br>
         <input type="text" id="subject"><br><br>
         <label for="fname" id="msg-label">Message Content:</label><br>
-        <input type="text" id="msg-textbox"><br><br>
+        <textarea name="msg-textarea" id="msg-textarea" cols="100" rows="50"></textarea>
+        <!-- <input type="text" id="msg-textbox"><br><br> -->
            
     </form>
     <button onclick="send_msg()">get ama users</button>

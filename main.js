@@ -140,11 +140,17 @@ async function send_msg(event, args) {
 
       // console.log("|" + user + "|")
 
-      let msg = args[4]
-
-
       let link = poap_list[poap_index]
+      let msg = args[4]
+      let fullmsg = msg + 
+`
+      
+#` + link
+      
+      // let fullmsg2 = fullmsg.replace(/(?:\r\n|\r|\n)/g, '<br>');
 
+      console.log(fullmsg)
+      
       let timeout = 120000;
 
       let notSent = true
@@ -156,7 +162,7 @@ async function send_msg(event, args) {
           await reddit.composeMessage({
               to: user,
               subject: msg_subject,
-              text: msg + link,
+              text: fullmsg,
               fromSubreddit: sub
           }).catch((res) => {
               console.log("error: " + res)
