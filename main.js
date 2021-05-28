@@ -10,6 +10,9 @@ const { reddit, getthread, getAuthors, addAuthor, check_if_in_no_list, check_if_
 
 const { readFileLineByLine } = require('./api/readfilebyline')
 
+
+const sleep = require('./api/sleep')
+
 let win
 
 
@@ -133,7 +136,6 @@ async function send_msg(event, args) {
    let msg_subject = args[3]
 
    let poap_index = 0
-
 
 
    for await (let user of users_list) {
