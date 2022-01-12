@@ -15,10 +15,15 @@ const env = dotenv.config()
 // });
 
 
-export const reddit = new snoowrap({
+const reddit = new snoowrap({
     userAgent: 'ASB:app',
     clientId: env.parsed.CLIENTID,
     clientSecret: env.parsed.CLIENTSECRET,
     refreshToken: env.parsed.REFRESHTOKEN
 });
+reddit.config({
+    continueAfterRatelimitError: true,
+    requestDelay: 100,
+});
+export default reddit
 

@@ -22,6 +22,10 @@ const reddit = new snoowrap({
     refreshToken: env.parsed.REFRESHTOKEN
 });
 
+reddit.config({
+    continueAfterRatelimitError: true,
+    requestDelay: 100,
+});
 
 
 module.exports = {
